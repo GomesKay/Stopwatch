@@ -42,8 +42,20 @@ const BaseButton = styled.button`
   }
 `
 
-export const PlayButton = styled(BaseButton)``
+export const PlayButton = styled(BaseButton)`
+  &:disabled {
+    cursor: not-allowed;
+  }
+`
 
-export const PauseButton = styled(BaseButton)``
+export const PauseButton = styled(BaseButton)`
+  &:disabled {
+    cursor: not-allowed;
+  }
+`
 
-export const ResetButton = styled(BaseButton)``
+export const ResetButton = styled(BaseButton)`
+  &:disabled {
+    cursor: not-allowed;
+  }
+`
