@@ -45,7 +45,8 @@ export function Home() {
     toast.warning("Cronômetro resetado")
   }
 
-  const minutes = Math.floor(seconds / 60)
+  const hours = Math.floor(seconds / 3600)
+  const minutes = Math.floor((seconds % 3600) / 60)
   const remainingSeconds = seconds % 60
   const formatNumber = (num: number) => String(num).padStart(2, "0")
 
@@ -54,6 +55,8 @@ export function Home() {
       <Title>Stopwatch</Title>
 
       <StopwatchContainer>
+        <span>{formatNumber(hours)}</span>
+        <span>:</span>
         <span>{formatNumber(minutes)}</span>
         <span>:</span>
         <span>{formatNumber(remainingSeconds)}</span>
